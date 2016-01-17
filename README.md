@@ -17,7 +17,7 @@ Just add BNSlidingViewController.swift to your project.
 1. Create your ```SlidingPanelViewController``` and make it implement ```Slidable``` protocol
   * ```collapsedView``` need to be your ViewController's view
   * ```expandedView``` need to be external view, NOT subview of you collapsedView (you can see easy way to do it in the demo project)
-  
+
   ![Alt text](Screenshots/addingCollapsedViewToStoryboard.png "add collapsedView")
 
 2. Create your ```MainViewController``` subclassing ```BNSlidingViewController```
