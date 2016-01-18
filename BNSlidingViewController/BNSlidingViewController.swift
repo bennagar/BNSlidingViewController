@@ -82,7 +82,7 @@ class BNSlidingViewController: UIViewController {
         slider.collapsedView.alpha = alfa
     }
     
-    private func animatePanel(shouldExpand shouldExpand: Bool){
+    func animatePanel(shouldExpand shouldExpand: Bool){
         if (shouldExpand) {
             currentState = .Expanded
             
