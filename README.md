@@ -1,4 +1,11 @@
 # BNSlidingViewController
+
+[![build](https://img.shields.io/badge/build-passing-brightgreen.svg?style=flat)](https://github.com/bennagar/BNSlidingViewController)
+[![Language](https://img.shields.io/badge/language-Swift%202-orange.svg)](https://github.com/bennagar/BNSlidingViewController)
+[![platform](https://img.shields.io/badge/platform-ios-lightgrey.svg?style=flat)](https://github.com/bennagar/BNSlidingViewController)
+[![platform](https://img.shields.io/badge/license-MIT-blue.svg?style=flat)](https://github.com/bennagar/BNSlidingViewController)
+[![platform](https://img.shields.io/twitter/follow/codeletter.svg?style=social)](https://twitter.com/codeletter)
+
 BNSlidingViewController is a Swift controller mimics the player overlay in iTunes iOS app. Created by [Ben Nagar](http://twitter.com/bennagar).
 
 ![Animation](Screenshots/BNSlidingView demo video.gif)
@@ -34,4 +41,4 @@ Just add BNSlidingViewController.swift to your project.
 ## License
 BNSlidingViewController is available under the MIT license. See the LICENSE file for more info.
 
-Follow on Twitter [✨CodeLetter ✎ ✨](http://twitter.com/codeletter)
+Follow on Twitter [✨CodeLetter ✎ ✨](http://twitter.com/codeletter)  [![platform](https://img.shields.io/twitter/follow/codeletter.svg?style=social)](https://twitter.com/codeletter)
