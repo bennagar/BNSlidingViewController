@@ -15,7 +15,7 @@ class ViewController: BNSlidingViewController{
         
         let sb = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle())
         let slider = sb.instantiateViewControllerWithIdentifier("slidingPanel") as! SlidingPanelViewController
-        setup(sliderView: slider)
+        setup(sliderView: slider, startExpanded: false)
     }
 
     override func didReceiveMemoryWarning() {

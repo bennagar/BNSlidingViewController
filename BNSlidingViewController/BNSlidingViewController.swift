@@ -38,15 +38,11 @@ class BNSlidingViewController: UIViewController {
         super.viewDidLoad()
     }
     
-    final func setup(sliderView sliderView:Slidable){
+    final func setup(sliderView sliderView:Slidable, startExpanded:Bool = true){
         
         slider = sliderView
         
-        let containerFrame = configExpanded()
-        
-        container = UIView(frame: containerFrame)
-        container.addSubview(slider.collapsedView)
-        container.addSubview(slider.expandedView)
+        container = configInitialView(expanded: startExpanded)
         
         view.addSubview(container)
         addChildViewController(slider.viewController)
@@ -63,15 +59,27 @@ class BNSlidingViewController: UIViewController {
         slider.didChangeState(newState)
     }
     
-    private func configExpanded() -> CGRect{
+    private func configInitialView(expanded expanded:Bool) -> UIView{
         
         slider.collapsedView.frame = CGRectMake(0, 0, CGRectGetWidth(view.frame), CGRectGetHeight(slider.collapsedView.frame))
         slider.expandedView.frame = CGRectOffset(view.frame, 0, CGRectGetHeight(slider.collapsedView.frame))
         
-        let collapsedHeight = CGRectGetHeight(slider.collapsedView.frame)
-        let containerFrame = CGRectMake(view.frame.origin.x, view.frame.origin.y - collapsedHeight,  CGRectGetWidth(view.frame), CGRectGetHeight(view.frame) + collapsedHeight)
         
-        return containerFrame
+        let collapsedHeight = CGRectGetHeight(slider.collapsedView.frame)
+        
+        let containerFrame:CGRect!
+        if expanded{
+            containerFrame = CGRectMake(view.frame.origin.x, view.frame.origin.y - collapsedHeight,  CGRectGetWidth(view.frame), CGRectGetHeight(view.frame) + collapsedHeight)
+        }
+        else{
+            containerFrame = CGRectMake(view.frame.origin.x, view.frame.origin.y - collapsedHeight + CGRectGetHeight(view.frame), CGRectGetWidth(view.frame), CGRectGetHeight(view.frame) + collapsedHeight)
+        }
+        
+        let container = UIView(frame: containerFrame)
+        container.addSubview(slider.collapsedView)
+        container.addSubview(slider.expandedView)
+        
+        return container
     }
     
     private func changeCollapsedViewAlfa(containerOrigin containerOrigin: CGFloat, total:CGFloat){
