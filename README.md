@@ -8,7 +8,7 @@
 
 BNSlidingViewController is a Swift controller mimics the player overlay in iTunes iOS app. Created by [Ben Nagar](http://twitter.com/bennagar).
 
-![Animation](Screenshots/BNSlidingView demo video.gif)
+![Animation](Screenshots/BNSlidingView%20demo%20video.gif)
 
 ## Requirements
 
